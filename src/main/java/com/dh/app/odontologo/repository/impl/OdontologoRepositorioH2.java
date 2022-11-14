@@ -5,6 +5,7 @@ import com.dh.app.odontologo.repository.OperacionGenerica;
 import com.dh.app.odontologo.util.UtilitarioH2;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -24,8 +25,8 @@ public class OdontologoRepositorioH2 implements OperacionGenerica<Odontologo> {
     }
 
     @Override
-    public Odontologo crear(Odontologo odontologo) {
-        logger.info("Creando un nuevo DatosOdontologo: " + odontologo.toString());
+    public Odontologo crear(@NotNull Odontologo odontologo) {
+        logger.info("Nuevo DatosOdontologo: " + odontologo.toString());
         Connection connection;
         PreparedStatement ps;
         try {

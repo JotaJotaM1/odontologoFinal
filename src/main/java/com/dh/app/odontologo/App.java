@@ -17,21 +17,21 @@ public class App {
 
         Odontologo odontologo1 = new Odontologo();
         odontologo1.setId(1L);
-        odontologo1.setNombre("Daniel");
-        odontologo1.setApellido("Jimenez");
-        odontologo1.setMatricula("1036640");
+        odontologo1.setNombre("James");
+        odontologo1.setApellido("Mosquera");
+        odontologo1.setMatricula("1143824");
 
         Odontologo odontologo2= new Odontologo();
         odontologo2.setId(2L);
-        odontologo2.setNombre("Astrid");
-        odontologo2.setApellido("Morales");
-        odontologo2.setMatricula("42792792");
+        odontologo2.setNombre("Maria");
+        odontologo2.setApellido("Rozo");
+        odontologo2.setMatricula("20611472");
 
         Odontologo odontologo3 = new Odontologo();
         odontologo3.setId(3L);
-        odontologo3.setNombre("Elkin");
-        odontologo3.setApellido("Jimenez");
-        odontologo3.setMatricula("985212");
+        odontologo3.setNombre("Leidy");
+        odontologo3.setApellido("Lozano");
+        odontologo3.setMatricula("1145672");
 
         Odontologo o1 = odontologoServicio.crear(odontologo1);
         Odontologo o2 = odontologoServicio.crear(odontologo2);

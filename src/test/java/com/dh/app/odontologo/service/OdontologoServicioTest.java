@@ -11,12 +11,12 @@ class OdontologoServicioTest {
 
     @Test
     void CrearOdontologoConParametros() {
-        Odontologo odontologo1 = new Odontologo(1L, "Alvarez", "Julian", "201818");
-        Odontologo odontologo2 = new Odontologo(2L, "Arboleda", "Ivan", "102055");
+        Odontologo odontologo1 = new Odontologo(1L, "Mosquera", "James", "James");
+        Odontologo odontologo2 = new Odontologo(2L, "Rozo", "Maria", "20611472");
 
 
-        Assertions.assertEquals("Julian", odontologo1.getNombre());
-        Assertions.assertEquals("Ivan", odontologo2.getNombre());
+        Assertions.assertEquals("James", odontologo1.getNombre());
+        Assertions.assertEquals("Maria", odontologo2.getNombre());
 
     }
 
@@ -24,8 +24,8 @@ class OdontologoServicioTest {
     void ProbarListadoOdontologos(){
 
         List<Odontologo>
-        Odontologo odontologo1 = new Odontologo(1L, "Alvarez", "Julian", "201818");
-        Odontologo odontologo2 = new Odontologo(2L, "Arboleda", "Ivan", "102055");
+        Odontologo odontologo1 = new Odontologo(1L, "Mosquera", "James", "James");
+        Odontologo odontologo2 = new Odontologo(2L, "Rozo", "Maria", "20611472");
 
 
 

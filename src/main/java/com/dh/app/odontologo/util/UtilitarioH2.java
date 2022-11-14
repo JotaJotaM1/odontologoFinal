@@ -1,7 +1,5 @@
 package com.dh.app.odontologo.util;
 
-
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,18 +12,17 @@ import java.sql.Statement;
 
 
 public class UtilitarioH2 {
-    // Ruta de la db
+
     public static final String H2_URL = "jdbc:h2:~/clinica";
 
 
     final static Logger logger = LogManager.getLogger(UtilitarioH2.class);
 
-    // Definir Conexion
+
     public Connection getConnection() throws SQLException {
         return DriverManager.getConnection(H2_URL);
     }
 
-    // Ejecutar consulta SQL sin paràmetros
     public void executeSQL(Connection conn, String sql) {
         try {
             Statement statement = conn.createStatement();
@@ -36,7 +33,6 @@ public class UtilitarioH2 {
         }
 
     }
-    // Ejecutar consulta SQL sin paràmetros
     public ResultSet executeQuery(Connection conn, String sql) {
         try {
             Statement statement = conn.createStatement();
