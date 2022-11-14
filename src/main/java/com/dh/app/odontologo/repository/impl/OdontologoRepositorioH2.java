@@ -78,7 +78,7 @@ public class OdontologoRepositorioH2 implements OperacionGenerica<Odontologo> {
                 + "apellido VARCHAR(100) NOT NULL"
                 + ")";
 
-        logger.info("Se crea en este momento la tabla de Odontologos.");
+        logger.info("Tabla de Odontologos.");
         Connection conn = utilDb.getConnection();
         utilDb.executeSQL(conn,sql_create_table);
 

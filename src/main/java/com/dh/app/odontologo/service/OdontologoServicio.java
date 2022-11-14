@@ -1,7 +1,6 @@
 package com.dh.app.odontologo.service;
 
 import com.dh.app.odontologo.model.Odontologo;
-import com.dh.app.odontologo.repository.OperacionGenerica;
 import com.dh.app.odontologo.repository.impl.OdontologoRepositorioH2;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,7 +26,7 @@ public class OdontologoServicio {
         }
     }
 
-    public Odontologo crear(Odontologo odontologo){
+    public Odontologo agregar(Odontologo odontologo){
         return odontologoRepositorioH2.crear(odontologo);
     }
 

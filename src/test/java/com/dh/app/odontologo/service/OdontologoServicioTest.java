@@ -1,33 +1,33 @@
 package com.dh.app.odontologo.service;
 
 import com.dh.app.odontologo.model.Odontologo;
-import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 class OdontologoServicioTest {
 
-    @Test
-    void CrearOdontologoConParametros() {
+    OdontologoServicio odontologoServicio = new OdontologoServicio();
+    @BeforeEach
+    void prepararDatos(){
+
         Odontologo odontologo1 = new Odontologo(1L, "Mosquera", "James", "James");
         Odontologo odontologo2 = new Odontologo(2L, "Rozo", "Maria", "20611472");
 
-
-        Assertions.assertEquals("James", odontologo1.getNombre());
-        Assertions.assertEquals("Maria", odontologo2.getNombre());
+        odontologoServicio.crearTablaBD();
+        odontologoServicio.agregar(odontologo1);
+        odontologoServicio.agregar(odontologo2);
 
     }
 
     @Test
     void ProbarListadoOdontologos(){
 
-        List<Odontologo>
-        Odontologo odontologo1 = new Odontologo(1L, "Mosquera", "James", "James");
-        Odontologo odontologo2 = new Odontologo(2L, "Rozo", "Maria", "20611472");
-
-
+        prepararDatos();
+        assertEquals(2, odontologoServicio.listarOdontologos().size());
 
     }
+
 }

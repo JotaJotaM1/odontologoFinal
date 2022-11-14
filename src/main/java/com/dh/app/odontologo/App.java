@@ -33,9 +33,9 @@ public class App {
         odontologo3.setApellido("Lozano");
         odontologo3.setMatricula("1145672");
 
-        Odontologo o1 = odontologoServicio.crear(odontologo1);
-        Odontologo o2 = odontologoServicio.crear(odontologo2);
-        Odontologo o3 = odontologoServicio.crear(odontologo3);
+        Odontologo o1 = odontologoServicio.agregar(odontologo1);
+        Odontologo o2 = odontologoServicio.agregar(odontologo2);
+        Odontologo o3 = odontologoServicio.agregar(odontologo3);
 
         odontologoServicio.listarOdontologos().forEach(odontologo -> logger.info(odontologo.toString()));
 
